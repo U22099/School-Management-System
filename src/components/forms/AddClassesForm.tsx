@@ -181,7 +181,13 @@ const AddClassesForm = ({
         </div>
         <button
   disabled={classesData.length < 1}
-  onClick={() => setPage((prev) => prev + 1)}
+  onClick={() => {
+  if (classesData.length >= 1) {
+    setPage((prev) => prev + 1);
+  } else {
+    console.log("Nice Try");
+  }
+}}
   className="button justify-end"
 >
   Next <ArrowRight className="stroke-black" />
