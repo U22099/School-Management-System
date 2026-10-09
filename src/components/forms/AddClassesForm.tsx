@@ -180,12 +180,12 @@ const AddClassesForm = ({
             ))}
         </div>
         <button
-          disabled={classesData.length < 1}
-          onClick={!(classesData.length < 1) ? () => setPage((prev) => prev + 1) : console.log("Nice Try")}
-          className="button justify-end"
-        >
-          Next <ArrowRight className="stroke-black" />
-        </button>
+  disabled={classesData.length < 1}
+  onClick={() => setPage((prev) => prev + 1)}
+  className="button justify-end"
+>
+  Next <ArrowRight className="stroke-black" />
+</button>
       </div>
     </motion.div>
   );
