@@ -219,7 +219,13 @@ const AddStaffsForm = ({
         </div>
         <button
           disabled={staffsData.length < 1}
-          onClick={!(staffsData.length < 1) ? () => setPage((prev) => prev + 1) : console.log("Nice Try")}
+          onClick={() => {
+  if (staffsData.length >= 1) {
+    setPage((prev) => prev + 1);
+  } else {
+    console.log("Nice Try");
+  }
+}}
           className="button justify-end"
         >
           Next <ArrowRight className="stroke-black" />
